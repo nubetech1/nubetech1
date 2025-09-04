@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>NubeFlash</title>
+</head>
+<body>
+<!-- Placar com pontuação e fase atual-->
+    <div id="scoreboard">
+  <p>Pontuação: <span id="score">0</span></p>
+  <p>Fase: <span id="phase">1</span></p>
+</div>
+
+<!-- Tabuleiro do jogo com 4 cores-->
+    <div id="game-board">
+    <div class="color" id="green"></div>
+    <div class="color" id="red"></div>
+    <div class="color" id="yellow"></div>
+    <div class="color" id="blue"></div>
+    </div>
+
+    <!-- Botão para iniciar o jogo-->
+    <button id="start">Iniciar</button>
+
+    <!--Modal para mostrar as mensagens de fim de jogo ou Vitoria-->
+    <div id="modal" class="hidden" style="display: none;">
+  <div id="modal-content">
+    <p id="modal-message"></p>
+    <button id="modal-button">OK</button>
+  </div>
+</div>
+<br>
+
+<a href=../../site/jogos.html><button class="voltar">VOLTAR PARA A NUBEGAMES</button></a>
+</body>
+<!--Inclusão do script principal-->
+    <script src="script.js"></script>
+</html>

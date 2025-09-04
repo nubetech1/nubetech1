@@ -1,0 +1,126 @@
+
+/*estilização geral do corpo*/
+body{ 
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #111;
+    color:white;
+}
+
+
+/*container do tabuleiro*/
+#game-board{
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 10px;
+}
+
+
+/* Estilo das cores */
+.color{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor:pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+
+/*efeito ao clicar*/
+.color:active{
+    opacity: 1;
+}
+
+/*animação de flash nas cores*/
+.flash {
+  animation: flashAnim 0.3s;
+}
+
+@keyframes flashAnim {
+  0% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.1); filter: brightness(2); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+
+/*cores personalizadas*/
+#green{background-color: green;}
+#red{background-color: red;}
+#yellow{background-color: yellow;}
+#blue{background-color: blue;}
+
+
+/*estilo do botão de inicio*/
+button{
+    padding: 10px 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+/*placar*/
+#scoreboard {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+/*modal*/
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+#modal-content {
+  background-color: #222;
+  padding: 30px 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+#modal-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/*oculta o Modal*/
+.hidden {
+  display: none;
+}
+
+.voltar {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  margin-top: 50px; /* aumenta a distância dele do botão anterior */
+  border: none;
+  border-radius: 1000px; /*DEIXA A BORDA CIRCULAR*/
+  font-size: 30px;
+  padding: 12px 24px;
+  cursor: pointer;
+  color:  #0c0c0c;/*COR DO TEXTO*/
+  background-color: rgb(10, 186, 181);/*COR DO FUNDO*/
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgb(4, 134, 130);/*COR DA SOMBRA*/
+  letter-spacing: 1px;/*ESPAÇO ENTRE AS CORES*/
+  font-family: "Segoe UI";
+  font-weight: bold;
+}
+#start{
+  border: none;
+  border-radius: 10000px;
+}
